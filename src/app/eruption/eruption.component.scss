@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+img {
+  margin: 10px 0;
+}
+
+a {
+  color: #8081eb;
+}
+
+a:visited {
+  color: #a0a1eb;
+}
+
+a:hover {
+  color: #6061eb;
+}
+
+a:active {
+  color: #4041eb;
+}

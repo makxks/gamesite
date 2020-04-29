@@ -1,1 +1,475 @@
-<p>rls-essay works!</p>
+<p>An essay on the use of legacy in Roguelike and Roguelite games. - April 2020</p>
+<hr />
+<p>Roguelike has become a sprawling term that is applied in marketing and by the gaming community to many games that have any similarities to the 1980 game Rogue
+  (Michael Toy, Glenn Wichman, Ken Arnold, Jon Lane). In fact more and more it seems that these definitions have take on a life of their own (especially with the
+  prevalence of online stores such as Steam and tags being applied by both developers and users to help new players find interesting games), anything with procedurally
+  generated environments, or some form of permadeath mechanic receives a “Roguelike” or “Roguelite” tag, or perhaps an “Action Roguelike” tag if its core gameplay is
+  far enough from the original top down, grid based dungeon crawling. </p>
+
+<p>I am not setting out to analyse or set in stone which definition or definitions are “correct”, as I feel that genres in general can be very hard to define (and the
+  fact that the term Roguelike has already been rigorously defined), especially with more and more wonderfully imaginative indie games entering the market. Here I am
+  going to take a look at the role of “legacy” in some of these games, so I will first define what I mean by legacy, then take some examples of mechanics that use legacy
+  and explore how it affects the experience of the player, basing the analysis around some key elements such as challenge, goals, different elements of user experience,
+  and balance of skill and strategy. I chose a variety of games to experience in order to try out some of the different approaches designers have taken, but as I wanted
+  to stick with these “Roguelikes” and “Roguelites” as they are defined by the community and the developers I mainly used Steam tags to inform my choice of games.</p>
+
+<h3>Legacy</h3>
+
+<p>For my purposes here I am going to use “legacy” to mean anything that persists between runs that the player takes into a dungeon (or dungeon-like area). These legacy
+  elements are mostly elements that are saved after death, allowing the player some control over their future in the game despite any permadeath mechanics. These in some
+  cases refer to elements that are retained by the player or player characters after they have completed a dungeon (rather than died), for example some status effects
+  may remain (several rewards may be given and kept by the player for completing a dungeon, so those will not be considered as “legacy”). This definition will allow me to
+  look in detail at the balance between death and progress in the game, how much does the player have to risk to progress in the game and will this affect their long term
+  investment in it.</p>
+
+<p>To get a better grip on the different approaches and ideas I am going to split games up into groups. A group with what I perceive as strong legacy elements, a group with
+  weaker legacy elements, and a group in between that has some moderate legacy elements. Once I have taken a look at these 3 groups I will make an attempt to consolidate all
+  my analysis into a concise set of points illustrating my thoughts on how legacy elements can enhance and detract from the whole player experience in Roguelikes, Roguelites,
+  and any other games with permadeath mechanics.</p>
+
+<h3>Strong Legacy</h3>
+
+<p>Strong legacy is closer to a traditional game mode with saves and retention of items. Allowing players to have something to show for their efforts and achievements in the
+  dungeons gives them more incentive to keep going, however with a standard Roguelike set up in which you always start from the same point this can make the difficulty at the
+  beginning of the game hard to set. Too easy and later runs with legacy gear will become boring, too difficult and it may alienate players rather than encourage them to keep
+  trying so that they can get the better equipment and progress.</p>
+
+<h4>World Building</h4>
+
+<p>World building is relatively common among games that have strong elements. Making the player responsible for things outside of the dungeon connects the retention of items,
+  currency, and materials with tangible progress. Additions to the world often include new shops, leading indirectly to an increase in player power. In all the examples the objective
+  of the worldbuilding is to give more meaningful value to each trip through the dungeon, allowing players to retain and spend items on improvements to their game world
+  that they find valuable.</p>
+
+<p>Moonlighter approaches this connection by making the shops and the world building a major mechanic in the game (appropriate as your character is in fact a shopkeeper). These
+  upgrades to the town help you to get further in the dungeons, and the game sidesteps the problem of early levels becoming boring by having several different dungeons with direct
+  doors into each that can be unlocked as you progress.</p>
+
+<div class="image-section">
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/moonlighter_shop.jpg" height="300px" />
+    <p>Moonlighter Shop.</p>
+  </div>
+
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/moonlighter_town.jpg" height="300px" />
+    <p>Moonlighter town.</p>
+  </div>
+</div>
+
+<div class="image-section">
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/moonlighter_upgrades_1.jpg" height="300px" />
+    <p>Moonlighter town upgrades.</p>
+  </div>
+
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/moonlighter_upgrades_2.jpg" height="300px" />
+    <p>Moonlighter shop upgrades.</p>
+  </div>
+</div>
+
+<p>Darkest Dungeon provides a similar type of settlement development, leveling up and improving the services in the hamlet using materials gathered from the dungeons. The services
+  can then be used to improve equipment, train heroes, reduce stress levels, remove afflictions or lock virtues, and to cure diseases. The hamlet can keep the heroes in good shape, and help the player rebuild if they have a particularly
+  disastrous trip to one of the dungeons.</p>
+
+<div class="image-section">
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/darkest_hamlet.jpg" height="300px" />
+    <p>The Darkest Dungeon settlement.</p>
+  </div>
+</div>
+
+<p>Iratus is overall a very similar game to Darkest Dungeon, but the world building follows a different approach that is consistent with the theme of the game, as you are this time
+  an evil necromancer taking revenge on the people who try to come to kill you. Your settlement is more a way to gather extra materials and build up your team of undead minions.
+  Minions can simply be created from materials, so more materials means more new minions.</p>
+
+<div class="image-section">
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/iratus_buildings.jpg" height="300px" />
+    <p>The buildings in Iratus all provide passive benefits.</p>
+  </div>
+</div>
+
+<p>One other type of world building sometimes present is the building of new rooms or resources into the dungeons so that you can more easily progress further. This is one of the
+  features of Hades. By building new types of rooms you can add havens, or healing rooms, and other beneficial rooms to the dungeon, as well as being able to change some decorative
+  aspects of the hub and the dungeon.</p>
+
+<div class="image-section">
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/hades_world.jpg" height="300px" />
+    <p>Hades Contractor screen, build new objects and functionality, or simply change the decorations.</p>
+  </div>
+</div>
+
+<p>The result of these World building approaches allows for the player to progress through the game as they wish, focusing on adding parts to their world that benefit them and their
+  play-style most, and while it does not end up being the end game goal of any of these examples, the player is more likely to become invested in an experience in which they can see
+  a constant development theyhave enacted. By adding this extra major gameplay mechanic parallel to the dungeon crawling legacy elements become very important, as the player
+  must be given some way to improve their settlement, either through materials, currency, or experience. Costs for improvements must be attainable enough
+  to keep players invested in the game, and yet not so easy to achieve that they are pointless. The improvements themselves must provide enough enhancement
+  as to be worthwhile and still keep within the balance of the game so as not to make the player overpowered and bored by the lack of challenge remaining.</p>
+
+<h4>Item Retention</h4>
+
+<p>Item retention (and the following element of experience and upgrades) are the most typical types of strong legacy mechanic. The objective sought when allowing players to retain
+  their items between runs through the dungeon is most often defined by what those items will be used for, as item retention is a mechanic that allows many others to be built on top
+  of it.</p>
+
+<p>Moonlighter uses these items as a way for the player to make money outside the dungeon, running their own store. This gives all items value, if your bag is not full when you leave
+  the dungeon you are missing out on possible earnings, earnings that could give you enough credits to add another store to the town, or buy a new weapon or potion.</p>
+
+<div class="image-section">
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/curse_of_dead_gods.jpg" height="300px" />
+    <p>Placeholder Image</p>
+  </div>
+</div>
+
+<p>Darkest Dungeon uses special items as a way of constructing and improving the buildings that you have, and consumable items that are retained between runs that can bolster your team.
+  Darkest Dungeon also uses currency to improve and train heroes.</p>
+
+<div class="image-section">
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/darkest_guild.jpg" height="300px" />
+    <p>The Darkest Dungeon Guild, for improving heroes skills.</p>
+  </div>
+
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/darkest_black.jpg" height="300px" />
+    <p>The Darkest Dungeon Blacksmith, for improving heroes equipment.</p>
+  </div>
+</div>
+
+<p>The dungeon running loop of Hades is built around retaining all the items you find and using those items to upgrade Zagreus (son of Hades, the players character) and to unlock new
+  rooms and weapons. Relic Hunters Zero has a system that similarly allows players to retain all their items when they complete a level and to use those for upgrades.</p>
+
+<div class="image-section">
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/hades_upgrade.jpg" height="300px" />
+    <p>Hades character upgrade screen.</p>
+  </div>
+</div>
+
+<p>While this is an extremely important element of games with strong legacy components, it is often a base to be built upon and the consideration must (similar to that of the world
+  building) be on how easy the items needed are to attain relative to the benefits they provide, and the costs of those benefits. The games I have tried here all use item retention in
+  such a way that, at least some of, the items can be used to make some improvement to you or your character, either by allowing you to earn more credits (as in Moonlighter), directly
+  as equippable items (Darkest Dungeon), or as upgrade materials (Hades and Relic Hunters Zero). This leads the player to always be making progress, even through failure. The materials
+  they retain can be used to mitigate the challenge of the next run (even if just a little). This can have more affect on the player themselves than on their actual power in the game.</p>
+
+  <div class="image-section">
+    <div class="image-and-desc">
+      <img src="assets/images/analysis/relic_hunters_relics_2.png" height="300px" />
+      <p>Relic Hunters Zero relics.</p>
+    </div>
+  </div>
+
+<h4>Upgrades, Experience & Leveling</h4>
+
+<p>Allowing a player to upgrade their character between runs is a big change from the gameplay loop of Rogue. Some Roguelikes and Roguelites mentioned later use a more conventional
+  system that allows the player to become more powerful as they progress through the dungeon by collecting items, stat upgrades and new weapons. Some of these games with strong legacy
+  eschew that approach for one allowing the player to have a more long term approach to their development, choosing which parts of their character they want to be strong, and which
+  they feel their play style does not require to be as strong. This requires delicate balance of difficulty (especially in the first few levels of the game) to retain interest across
+  repeated runs, but has the big added benefit of being a very familiar system to many players. Many players will have experienced levelling systems in other games and will quickly
+  understand which values, materials, or currencies they require to become more powerful. Being able to frame your system within a generally well understood concept means that many
+  players will be able to quickly become comfortable with the progression systems in your game, allowing you to perhaps flesh the system itself out more deeply, or perhaps to add more
+  depth in other areas of your game without overwhelming players.</p>
+
+<p>Everspace makes the upgrading of your ship quite a big part of your journey. You can use your saved credits to upgrade many different parts of the ship, weapons, shields, abilities
+  etc. There are also a couple of other variants of ship that you can purchase that will reward slightly different styles of play. To progress through the game and take on some of the
+  larger, more difficult enemies, it is, while not totally necessary (as I’m sure that with some clever use of weapons and items and some great flying it would be possible to defeat
+  even them with the basic ship) very beneficial to your progress. There are many possible combinations and paths that you can choose to take with your upgrades, and this is one
+  instance where using this kind of levelling system where the progression mechanic itself is simple (use credits, buy upgrades) seems to allow more room to have more interesting and
+  varied upgrades themselves, as there is no need to tax any more of the players attention for them to think about any other requirements each upgrade has.</p>
+
+<div class="image-section">
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/everspace_perks.jpg" height="300px" />
+    <p>Everspace ship upgrades.</p>
+  </div>
+
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/everspace_equipment.jpg" height="300px" />
+    <p>Everspace ship setup.</p>
+  </div>
+</div>
+<div class="image-section">
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/everspace_ship_1.jpg" height="300px" />
+    <p>Everspace unlockable ship.</p>
+  </div>
+
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/everspace_ship_2.jpg" height="300px" />
+    <p>Everspace unlockable ship.</p>
+  </div>
+</div>
+
+<p>Deep Rock Galactic is tagged on Steam as an “Action-Roguelike” and shares little with classic Roguelike games except a system for procedurally generating the mines that the
+  missions take place in. As it has been tagged as an “Action-Roguelike” I played it for this exercise and found that, the items you collect on your excursions are principally mining
+  related, and you are reward with currency for your efforts. This currency can be spent on upgrading characters and equipment with the aim of tackling higher difficulty mines for
+  higher payouts. This kind of progression is possible because of the offers of missions with a variety of hazard levels, allowing the player to choose their own next mission and
+  deciding when they are ready for something more difficult.</p>
+
+<div class="image-section">
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/DRG_char.jpg" height="300px" />
+    <p>Deep Rock Galactic player equipment and upgrades.</p>
+  </div>
+
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/DRG_drone.jpg" height="300px" />
+    <p>Deep Rock Galactic drone upgrades.</p>
+  </div>
+</div>
+
+<h4>Story</h4>
+
+<p>For many of these games, there is a strong, if underlying, story element. There are several approaches to being able to continue the story despite failure in the dungeon.
+  Hades takes advantage of a character who is intrinsically immortal to be able to continue driving the story forward no matter how many times he "dies". Darkest dungeon
+  uses heroes, while the actual player character is never seen but is always in command, therefore always able to continue the story onward, no matter how many heroes die.
+  Everspaces main character is a clone, able to be recreated as many times as it takes to complete the story. All these approaches are interesting ways to solve the problem
+  of adding a continuing story to a Roguelike game. Heat Signature uses another method in which some parallels may be drawn to the Darkest Dungeon approach. Rather than the
+  player being in overall command and giving instructions to a character, the player directly takes control of different mercenaries. If one mercenary dies there is another
+  there to take his place and carry on the story progression of the previous mercenary. The choice of 4 mercenaries each time with different skills sets allows the player
+  to select a character with a skillset they think they will enjoy, and if they do it makes the loss of that character all the more painful.</p>
+
+<div class="image-section">
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/heat_signature_stash.jpg" height="300px" />
+    <p>Heat Signature space station.</p>
+  </div>
+</div>
+
+<h4>Strong Legacy Conclusions</h4>
+
+<p>Games and elements with strong legacy help to provide a clear progression system for players, upgrading your character is a definite improvement over not upgrading your character.
+   Adding a new building or shop to the game world is a tangible piece of progress and it rewards players with possibly new items to buy or something new to do. Getting the difficulty
+   right in these situations is a tough balancing act. If the early stages are too difficult players will be discouraged from ever reaching the stage where they can apply upgrades.
+   Too easy and they will become boring for the player after they are upgraded. If upgrades are too easy to achieve they feel less worthwhile and less satisfying, and if they are too
+   difficult to reach this once again discourages continued play time. Offering different paths, and carefully tuning the upgrades, and the costs, to be noticeable but not overpowered
+   seems to work well in several of these examples.</p>
+
+<p>From these examples, Everspace seems to have the greatest trouble with upgrades and difficulty levels. For players that stick with it the game has many possibilities and
+  great experiences within, but for the first few runs it can feel quite pointless as they die, have too little money to upgrade and go again only to experience the same
+  result until they figure out how to progress further or gain more money.</p>
+
+<p>Moonlighter has one of the most fun systems for item retention. Being able to take everything you found in the dungeon and sell it in your shop can be surprisingly addictive,
+  and I spent a lot of time while playing changing prices and just enjoying watching the customers walk around the shop.</p>
+
+<p>Darkest Dungeon has a very effective world building mechanic. There are several main buildings each with their own functions, and upgrading them can have a big effect on
+  your heroes and their effectiveness. There are also much more costly structures that will improve some characteristics of certain types of heroes. This gives more benefits
+  and improvements to chase even after your settlement is “complete” boosting longevity and use for items after all the regular improvements have been bought.</p>
+
+<p>From these examples of well used Strong Legacy, it is clear that story is more and more important even in a genre such as Roguelike. Even if the story is only told between runs,
+  or at major junctures in a dungeon, the story gives the player more incentive to continue. The lack of story and the instruction and direction it gives can be a big loss.</p>
+
+<h3>Weak Legacy</h3>
+
+<h4>Loot Pool Unlocks</h4>
+
+<p>Loot pool unlocks are a very adaptable form of legacy. Games that start each run from the same effective zero point every time can implement loot pools, and loot pool
+  unlocks to give the player some agency over the chance in the game, and let them aim the loot towards their own style.</p>
+
+<p>Dead Cells and Slay The Spire are both very good examples of this. Dead Cells allows you to spend your cells throughout the game on a variety of different upgrades, many
+  only last for that run, but you can purchase new weapons and sub-weapons that will then be unlocked and may drop by chance in any subsequent run. Slay The Spire has slightly
+  less agency, and unlocks cards for the player as they reach different milestones with each character.</p>
+
+<div class="image-section">
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/dead_cells_all_items.jpg" height="300px" />
+    <p>Dead Cells item unlock store.</p>
+  </div>
+
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/slay_the_spire_cards.jpg" height="300px" />
+    <p>Slay The Spire card unlock.</p>
+  </div>
+</div>
+<div class="image-section">
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/risk_of_rain_death.jpg" height="300px" />
+    <p>Death screen in Risk Of Rain 2, showing unlocked item.</p>
+  </div>
+
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/risk_of_rain_items.jpg" height="300px" />
+    <p>Risk Of Rain 2 unlocked / found items.</p>
+  </div>
+</div>
+
+<p>Risk Of Rain 2 (still in early access) also uses loot pool unlocks (and also character unlocks) but the unlocks function in a different way. In Dead Cells you use currency
+  you have collected to unlock items and weapons that you think you will want to use in the future. In Risk Of Rain you are rewarded for certain feats with certain unlocks to
+  the loot pool. These different approaches end up leading to very different consequences, partly from the systems and partly from the differences in the games. Rewarding players
+  for special achievements is great as they feel more like they have earned something special, not just picked what they want from a list, but it can end in disappointment if
+  the reward ends up not being beneficial to their play or feeling lacklustre to them. There are then further considerations on whether you tell the player that they can seek
+  out this achievement, directly tell them how they will be rewarded, or keep it a secret until they have reached that goal, or perhaps somewhere in between. An important factor
+  that is handled quite differently by these games is how the player is given feedback upon unlocking a new item into the loot pool. Dead Cells gives very clear and satisfying
+  sound and graphical evidence that you have unlocked a new item. Risk Of Rain (it must be noted again that at the time of writing it is in early access so this is subject to change)
+  gives a relatively small achievement notice during the game that you have achieved and therefore unlocked something.</p>
+
+<h3>Moderate Legacy</h3>
+
+<h4>Perks</h4>
+
+<p>Perks are a nice middle ground between a strong legacy approach such as directly becoming stronger through upgrades and leveling, and a weak legacy approach such as just
+  adding to the loot pool so that you may encounter a weapon or item during a dungeon run. Similar to choosing items to unlock to add to a loot pool, there should be enough
+  choice and variety to cater to different play styles.</p>
+
+<p>Curse Of The Dead Gods (currently in early access) uses a special kind of retained currency to allow players to unlock perks (and also to be able to give themselves the option
+  to re-roll weapon drops). These perks can be powerful if they match up with the play style you want to use, and if you can use them effectively, but they are in no way game
+  breaking, they give you small advantages that can make a big difference if you take the chance to use them properly. For example enhancing trap damage to enemies from (traps
+  are already in the levels, and can also damage the player, they are not traps set by the player), or enhancing flame damage to enemies. These encourage different playstyles,
+  or benefit existing ones, rewarding the player in an area they already use and enjoy, or pushing them to try things they wouldn’t have tried otherwise. The (unlockable) option
+  to use 3 perks at once also mitigates the possibility of disappointment or any risk that the perks may feel useless simply due to players not hitting quite the right playstyle
+  to maximize their effectiveness.</p>
+
+<div class="image-section">
+  <div class="image-and-desc">
+    <img src="assets/images/analysis/curse_of_dead_gods.jpg" height="300px" />
+    <p>Curse Of The Dead Gods perks.</p>
+  </div>
+</div>
+
+<h3>Conclusions</h3>
+
+<p>Legacy elements in all kinds of games have been approached in a wide variety of interesting ways. From studying these examples it is clear that many different interpretations
+  can be successful. The biggest contributor to whether the legacy elements worked well was whether they were well considered alongside the whole theme and design of the rest of
+  the game.</p>
+
+<p>Moonlighter sets out to create a game where you are both a successful dungeoneer, and a profitable businessman, so permadeath and losing all your progress while in the dungeon
+  would create much more frustration as the player would have put effort into advancing the town and the business and all that would be lost perhaps because of some unlucky hits.
+  This strong legacy approach ties together well with the rest of the experience, enhancing it, removing much of the frustration and giving the player more enjoyment and more
+  ability to progress.</p>
+
+<p>Risk Of Rain 2 and Dead Cells set out to create exciting fluid combat, where the player is rewarded for their skills. Without further responsibilities outside of the dungeon,
+  and with rewards almost exclusively applying to the current run, the player feels much less frustrated by failure, as they can start again from exactly the same point. Creating
+  a combat system based on player skill and not so much on upgrades means the player has a sense of possibility in their failure, if they are just a little better they can get
+  further, beat the next boss, complete the dungeon, which encourages players to stick with the game and try again. Adding more legacy elements, such as persistent items or skills
+  would dilute the experience, removing part of the challenge for the player by allowing them to start with stronger skills. Many players seek out these games exactly because
+  they have a certain level of challenge to them. Everspace handles things quite differently, always giving the player a way out, but meaning that they will miss out on items and
+  currency if they take that route. This can lead to frustration in early runs when the player tries to take something on that they are not ready for and being easily beaten by
+  the enemy. If this happens to a player several times they may become discouraged and consider whether they want to continue playing.</p>
+
+<p>When I started I thought I would at least find one kind of legacy approach that I preferred, but after playing this variety of approaches it really comes down to the whole
+  package of player experience. The most successful, enjoyable, and fun came from games that used legacy elements in a way that enhanced the aims for player experience and tied
+  in well with the overall theme of the game.</p>
+
+<p>One of the most interesting, and perhaps inspiring things I found from this experience is the pure breadth of legacy aspects used and idea that many of these could be
+  balanced and adjusted for use in any game. For example a classic turn based RPG but instead of levelling you power up by improving a settlement and using the new services
+  that appear there, or a FPS with a blend of perks and item retention in which you lose your weapons on death but can keep a few backups ready to go just in case. By mixing some
+  light Rogue elements to introduce consequences, many legacy components could be used to create interesting combinations to experiment with.</p>
+
+<h3>Games Played and Analysed</h3>
+
+<section class="game-list">
+  <section class="game-list-section">
+    <section class="game-list-item five-games">
+      <p><b>The Binding Of Isaac</b></p>
+      <p><b>Nicalis Inc.</b></p>
+      <img src="assets/images/analysis/the_binding_of_isaac.png" height="150px" />
+      <p><a href="https://store.steampowered.com/app/250900/The_Binding_of_Isaac_Rebirth/">Steam site</a></p>
+      <p><a href="https://www.nicalis.com/games/thebindingofisaacab+">Website</a></p>
+      <p><a href="https://www.youtube.com/watch?v=WtbzlHY5GGw">Video</a></p>
+    </section>
+    <section class="game-list-item five-games">
+      <p><b>Curse Of The Dead Gods</b></p>
+      <p><b>Passtech Games</b></p>
+      <img src="assets/images/analysis/curse_of_the_dead_gods.png" height="150px" />
+      <p><a href="https://store.steampowered.com/app/1123770/Curse_of_the_Dead_Gods/">Steam site</a></p>
+      <p><a href="https://curse-of-the-dead-gods.com/">Website</a></p>
+      <p><a href="https://www.youtube.com/watch?v=IpVkcChXnh0">Video</a></p>
+    </section>
+    <section class="game-list-item five-games">
+      <p><b>Darkest Dungeon</b></p>
+      <p><b>Redhook Studios</b></p>
+      <img src="assets/images/analysis/darkest_dungeon.png" height="150px" />
+      <p><a href="https://store.steampowered.com/app/262060/Darkest_Dungeon/">Steam site</a></p>
+      <p><a href="https://www.darkestdungeon.com/">Website</a></p>
+      <p><a href="https://www.youtube.com/watch?v=hDzZvtPR9P4">Video</a></p>
+    </section>
+    <section class="game-list-item five-games">
+      <p><b>Dead Cells</b></p>
+      <p><b>Motion Twin</b></p>
+      <img src="assets/images/analysis/dead_cells.png" height="150px" />
+      <p><a href="https://store.steampowered.com/app/588650/Dead_Cells/">Steam site</a></p>
+      <p><a href="https://dead-cells.com/">Website</a></p>
+      <p><a href="https://www.youtube.com/watch?v=mdNovVWIPt0">Video</a></p>
+    </section>
+    <section class="game-list-item five-games">
+      <p><b>Deep Rock Galactic</b></p>
+      <p><b>Ghost Ship Games</b></p>
+      <img src="assets/images/analysis/deep_rock_galactic.png" height="150px" />
+      <p><a href="https://store.steampowered.com/app/548430/Deep_Rock_Galactic/">Steam site</a></p>
+      <p><a href="https://www.deeprockgalactic.com/">Website</a></p>
+      <p><a href="https://www.youtube.com/watch?v=1FaT_khr48U">Video</a></p>
+    </section>
+  </section>
+  <section class="game-list-section">
+    <section class="game-list-item four-games">
+      <p><b>Everspace</b></p>
+      <p><b>Rockfish Games</b></p>
+      <img src="assets/images/analysis/everspace.png" height="150px" />
+      <p><a href="https://store.steampowered.com/app/396750/EVERSPACE/">Steam site</a></p>
+      <p><a href="https://classic.everspace-game.com/game/">Website</a></p>
+      <p><a href="https://www.youtube.com/watch?v=gJ1AsNPktiI">Video</a></p>
+    </section>
+    <section class="game-list-item four-games">
+      <p><b>Hades</b></p>
+      <p><b>Supergiant Games</b></p>
+      <img src="assets/images/analysis/hades.png" height="150px" />
+      <p><a href="https://store.steampowered.com/app/1145360/Hades/">Steam site</a></p>
+      <p><a href="https://www.supergiantgames.com/games/hades/">Website</a></p>
+      <p><a href="https://www.youtube.com/watch?v=ClZe5x8Tfiw">Video</a></p>
+    </section>
+    <section class="game-list-item four-games">
+      <p><b>Heat Signature</b></p>
+      <p><b>Suspicious Developments</b></p>
+      <img src="assets/images/analysis/heat_signature.png" height="150px" />
+      <p><a href="https://store.steampowered.com/app/268130/Heat_Signature/">Steam site</a></p>
+      <p><a href="http://heatsig.com/">Website</a></p>
+      <p><a href="https://www.youtube.com/watch?v=r-eXJvnBRGM">Video</a></p>
+    </section>
+    <section class="game-list-item four-games">
+      <p><b>Iratus: Lord Of The Dead</b></p>
+      <p><b>Unfrozen</b></p>
+      <img src="assets/images/analysis/iratus.png" height="150px" />
+      <p><a href="https://store.steampowered.com/app/807120/Iratus_Lord_of_the_Dead/">Steam site</a></p>
+      <p><a href="https://iratus.org/">Website</a></p>
+      <p><a href="https://www.youtube.com/watch?v=aOLF8jQxzh0">Video</a></p>
+    </section>
+  </section>
+  <section class="game-list-section">
+    <section class="game-list-item four-games">
+      <p><b>Moonlighter</b></p>
+      <p><b>Digital Sun</b></p>
+      <img src="assets/images/analysis/moonlighter.png" height="150px" />
+      <p><a href="https://store.steampowered.com/app/606150/Moonlighter/">Steam site</a></p>
+      <p><a href="https://moonlighterthegame.com/">Website</a></p>
+      <p><a href="https://www.youtube.com/watch?v=OLuNft1Cusc">Video</a></p>
+    </section>
+    <section class="game-list-item four-games">
+      <p><b>Relic Hunters Zero</b></p>
+      <p><b>Rogue Snail</b></p>
+      <img src="assets/images/analysis/relic_hunters_zero.png" height="150px" />
+      <p><a href="https://store.steampowered.com/app/382490/Relic_Hunters_Zero/">Steam site</a></p>
+      <p><a href="http://www.roguesnail.com/games/relic-hunters-zero/">Website</a></p>
+      <p><a href="https://www.youtube.com/watch?v=DgzgoeNSCc4">Video</a></p>
+    </section>
+    <section class="game-list-item four-games">
+      <p><b>Risk Of Rain 2</b></p>
+      <p><b>Hopoo Games</b></p>
+      <img src="assets/images/analysis/risk_of_rain.png" height="150px" />
+      <p><a href="https://store.steampowered.com/app/632360/Risk_of_Rain_2/">Steam site</a></p>
+      <p><a href="https://www.riskofrain.com/">Website</a></p>
+      <p><a href="https://www.youtube.com/watch?v=IeLNqCrCtWs">Video</a></p>
+    </section>
+    <section class="game-list-item four-games">
+      <p><b>Slay The Spire</b></p>
+      <p><b>Megacrit Games</b></p>
+      <img src="assets/images/analysis/slay_the_spire.png" height="150px" />
+      <p><a href="https://store.steampowered.com/app/646570/Slay_the_Spire/">Steam site</a></p>
+      <p><a href="https://www.megacrit.com/">Website</a></p>
+      <p><a href="https://www.youtube.com/watch?v=tfeN5UwGrcs">Video</a></p>
+    </section>
+  </section>
+</section>

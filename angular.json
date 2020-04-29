@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "max-gamesite"
+    }
+  },
+  "defaultProject": "max-gamesite",
+  "cli": {
+    "analytics": "025cd78a-9220-4665-b4a8-2cf05c5c7cc5"
+  }
 }

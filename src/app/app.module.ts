@@ -12,6 +12,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ConceptsComponent } from './concepts/concepts.component';
+import { ArtComponent } from './art/art.component';
 
 import { SparkComponent } from './spark/spark.component';
 import { NetworkComponent } from './network/network.component';
@@ -23,6 +24,20 @@ import { NetworkPostComponent } from './network-post/network-post.component';
 import { EruptionPostComponent } from './eruption-post/eruption-post.component';
 
 import { RLsEssayComponent } from './rls-essay/rls-essay.component';
+import { KatanaZeroComponent } from './katana-zero/katana-zero.component';
+import { BabaIsYouComponent } from './baba-is-you/baba-is-you.component';
+
+import { RaidConceptComponent } from './raid-concept/raid-concept.component';
+import { Armor25Component } from './armor-25/armor-25.component';
+
+import { ModellingComponent } from './modelling/modelling.component';
+import { ModellingGalleryComponent } from './modelling-gallery/modelling-gallery.component';
+
+import { DrawingComponent } from './drawing/drawing.component';
+import { DrawingGalleryComponent } from './drawing-gallery/drawing-gallery.component';
+
+import { PixelComponent } from './pixel/pixel.component';
+import { PixelGalleryComponent } from './pixel-gallery/pixel-gallery.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +51,7 @@ import { RLsEssayComponent } from './rls-essay/rls-essay.component';
     FooterComponent,
     HeaderComponent,
     ConceptsComponent,
+    ArtComponent,
     SparkComponent,
     NetworkComponent,
     EruptionComponent,
@@ -43,7 +59,17 @@ import { RLsEssayComponent } from './rls-essay/rls-essay.component';
     SparkPostComponent,
     EruptionPostComponent,
     NetworkPostComponent,
-    RLsEssayComponent
+    RLsEssayComponent,
+    KatanaZeroComponent,
+    BabaIsYouComponent,
+    RaidConceptComponent,
+    Armor25Component,
+    ModellingComponent,
+    ModellingGalleryComponent,
+    DrawingComponent,
+    DrawingGalleryComponent,
+    PixelComponent,
+    PixelGalleryComponent
   ],
   imports: [
     BrowserModule,

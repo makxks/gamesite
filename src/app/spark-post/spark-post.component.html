@@ -1,1 +1,188 @@
-<p>spark-post works!</p>
+<h3>Spark Postmortem</h3>
+<p>The Spark Github containing all assets and scripts can be found <a href="https://github.com/makxks/Spark">here</a>.</p>
+<p>Note: For this game I made no social media accounts, or attempts to build any following. My aim was to design and create a game I was happy with, and felt was succesful as a game.</p>
+
+<hr />
+
+<h3>Origins</h3>
+
+<p>Spark began as a simple idea of using annular shapes as a path to move a point (the Spark) as far as possible away from the starting point.</p>
+<p>The game went through several iterations before reaching a playable prototype, these early concepts dealt with the position and orientation of
+  the annular elements, among other things. The first concept was to simply start the Spark in the center of the rings (all centered at one point, just growing ever larger) and have players find their
+  way as far from that point as possible on the 2D plane before some time ran out or they could no longer advance. Another similar concept placed rings within other
+  rings and side by side, leading to greater variance in layout (although still on a 2D plane), but still problems in determining how to constrain player movement to determine
+  when a level or play session would end. A very different concept experimented with "throwing" the spark across the arena, similar to an Angry Birds
+  type game, trying to arrive at the target element, picking up other targets along the way. Eventually the idea of a 3D path was settled on. Here I will discuss
+  how I arrived at the final design, and where I feel it succeeds and where it does not.</p>
+
+<h3>The Spark</h3>
+
+<p>The Spark is the main element of the game. The player controls how the Spark moves (most of the time), and their goal is to move it as far as possible before the charge runs out. As the
+  Spark was always conceived of as a "charge" of electricity I chose to use the charge of the Spark as the limit of player movement, meaning that the player can continue to play until the
+  Spark runs out of charge, or they have no moves left to make. The charge of the Spark diminishes only when the player moves, so the game can be played in a very strategic way, spending
+  more time to find the best possible path. The remaining charge of the Spark is represented by its size. As the player moves they will see the Spark losing charge and getting smaller and
+  smaller with each move unless it is recharged. I tried to use particle effects and HDR light effects to give the Spark an electrical "charged" appearance, and this is one area that I
+  feel turned out very well. Watching the last remnants of the Spark ebb away with every move just as you approach a charging gate adds some tension into the proceedings and the Spark looks
+  very nice with the glowing effects.</p>
+
+<h3>Game Elements and Layout</h3>
+
+<p>The 3 dimensional layout was chosen as it gave the best perspective to the player, and gave them the best possible information on how they should plan their next moves. This combined
+  with the charge mechanic (only losing charge when moving the Spark) allows players to play slowly and tactically if they wish. Making the most of their position and their view of the
+  entire game area to plan a route ahead. As well as the Spark there are 2 other basic elements. The ring elements, and the charging gates. The ring elements can appear in several different
+  varieties. The type of ring and its current status is shown by its colour. Rings are composed of sections and any of these sections can be missing (up to entire rings, this is limited
+  to after a certain number of sets due to the way the game begins and progresses).</p>
+
+<p>Green - this is the currently charged ring. When the Spark is touching a ring, that ring is charged and can be controlled, unless it is one of the uncontrollable types.</p>
+<p>Blue - this ring cannot be controlled and cannot rotate.</p>
+<p>Purple - this ring cannot be controlled but will rotate on its own at timed intervals when charged.</p>
+<p>Red - this is an exploding ring that will explode if charged for too long. The count down is shown by the ring flashing from red to green (as it is the currently charged ring)
+  faster and faster.</p>
+<p>Yellow - this colour indicates that a ring is in the same set as the currently charged ring, and the Spark can be moved sideways to this ring.</p>
+<p>Flashing yellow - the flashing yellow ring indicates the ring directly in front of the currently charged ring. Along with the other yellow rings this gives a clearer view to the player
+  of which moves are available to them at the present moment. In earlier builds there were some problems during testing with players being unable to tell whether a certain ring segment
+  was directly ahead of the currently active ring, or if there was a missing ring in between. This lead to some games ending due to this misinterpretation, so I decided there needed to be
+  some way to easily tell which ring was directly in front of the current ring. This did give players in further tests a better sense of where they could move to, and made for a smoother
+  experience without confusion.</p>
+<p>Orange - all other rings. These are standard type rings that are not the active ring, or in the currently active ring set, and they are not the ring directly ahead of the currently active ring.</p>
+
+<p>This variety of rings was specifically chosen with the objective of varying the play experience and to give players a little more to think about. When these varieties and constraints were not included during testing
+  the experience was clearly less engaging, less interesting, and less fun. The only other elements in the game are the charging gates. These serve as targets for the player so that they can recharge the Spark
+  and continue moving forward. The gates show a transparent window with a sparkling effect before they have been used, after the Spark passes through this window pane disappears leaving only the frame.
+  The gates are very easily distinguishable from the rings, I purposefully used the same bright colour as the Spark, and square geometry to make them very distinct from the rings and
+  to mark them as possessing the same quality as the Spark.</p>
+
+<h3>Generation</h3>
+
+<p>The game is procedurally generated so it can be endless. The generation was experimented with and carefully tuned so that the number of rings in a set was not overwhelming, and so that the current number of
+  rings in the set steadily increased from the start of the game, giving additional feedback to the player of their progress, simply by being able to see more rings on the screen the player knows they are doing
+  well. For each ring there is a 60% chance that it will be a standard ring, a 20% chance it will be an automatically rotating ring, and 10% each for fixed and exploding rings. When generating rings, a standard random
+  value is used between the minimum value (1 when there is only 1 ring in the set, and 0 after the second is added), and 16 (the maximum segments in the ring). After this has been determined an algorithm loops through the
+  segment positions for as long as is necessary to generate the number of segments determined by the random number. First it will check if the segment already exists, then a random number between 0 and 1 is generated. If
+  this number is above 0.4 a segment is added to the ring.</p>
+
+<p>While the generation contains exceptions for the start of the game to prevent different kinds of rings being created too early on (only standard rings appear until set 10), and to make sure that there are no missing rings when there is only one ring in
+  the set, there can be situations where players end up with no available moves. I did experiment with removing any chance of this happening, and simply having the only fail condition as the Spark running out of charge.
+  After these experimentations I decided that leaving this possibility in, while it still felt imperfect, felt much better than the game without it. Without this possibility there was less need to worry about what
+  was coming up ahead and less need to plan an effective route at all. The speed at which it is possible to restart the game is a big benefit here, as there is no long waiting time or loading time before being able
+  to make another attempt.</p>
+
+<p>There is a period, after the ring sets have between 4 - 7 rings in them, that the game becomes more difficult. This is intended, as each time a recharge gate is added the position is chosen randomly, and only one is added at a time, and if it is much further
+  around the set than the current position of the player it can be very hard to reach, as there is only one path to it. I decided that missing one gate should not end the game, so with one gates worth of charge you can bypass one gate and still make it
+  to the second gate. Once the final ring in the set has been generated, the opposite path opens up and this can (rarely) make the game easier once this ring has been added, by giving the player the ability to reach any ring in the set
+  by going either way. Due to the amount of charge it takes for the player to make their way around the set of rings, and the other factors (different ring types, missing ring sections) constraining the players movement, I decided to not
+  try to mitigate this difficulty problem. I do feel that this could have been handled better with some kind of subtle change to the generation of the rings that only took place after the ring sets were complete, and then slowly and steadily increased
+  that difficulty afterwards.</p>
+
+<h3>Controls</h3>
+
+<p>While the rest of the game is identical for Android and PC versions, the controls must of course be different. There are 3 moves available to players. They can jump the Spark forwards to the next ring (if there is a piece
+  there to jump to). They can move sideways to another ring in the set (again, another ring must be there to be moved to). Finally they can rotate the current ring they are on (as long as the type of ring allows).</p>
+
+<h4>PC controls</h4>
+
+<p>Jump forward - space bar</p>
+
+<p>Jump sideways - w / up arrow</p>
+
+<p>Rotate ring - a & d / left and right arrows</p>
+
+<p>The decisions related to the PC controls were relatively simple. As jumping forward was the main aim of the game it made sense to place the control on the main / biggest key on the keyboard. The other controls
+  are related to directions, and from the perspective of the Spark, jumping sideways is jumping up and away from the current ring, so w and the up arrow made sense. The rotation of the ring uses left / a to rotate anti-clockwise
+  and right / d to rotate clockwise, so the rotation control is always based from the reference point of the ring itself, and moving the top of the ring to the left (left and a) or right (right and d).</p>
+
+<h4>Android controls</h4>
+
+<p>Jump forward - tap</p>
+
+<p>Jump sideways - hold</p>
+
+<p>Rotate ring - swipe</p>
+
+<p>The reasoning behind the jump forward control for Android being to tap is the same as the reasoning behind the PC control being the spacebar. Being the main control of the game it made sense to make it use the most
+  common control method. I experimented with making the jump sideways a double tap, however that meant that the game would have to wait a fraction of a second after a single tap to wait and find out if a second tap would follow
+  to make a double tap as there is no way to satisfactorily begin a jump forward and then change into a jump sideways. This meant that the main control to jump forward began to feel slow, unresponsive and laggy, so the hold control
+  felt much better all round. The rotation control is based on the swipe direction. I tried to make it feel like the swipe was pushing or pulling the ring in the same direction that you were swiping. That means that the control depends
+  on the starting position and swipe direction of the swipe. This approach feels much more intuitive than only having left and right swipes, or up and down swipes, so I am quite satisfied with this control method.</p>
+
+<h3>Sound</h3>
+
+<h4>Sound Effects</h4>
+
+<section class="image-section">
+  <section class="image-and-desc">
+    <audio controls>
+      <source src="" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+    <p></p>
+  </section>
+</section>
+
+<section class="image-section">
+  <section class="image-and-desc">
+    <audio controls>
+      <source src="" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+    <p></p>
+  </section>
+</section>
+
+<section class="image-section">
+  <section class="image-and-desc">
+    <audio controls>
+      <source src="" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+    <p></p>
+  </section>
+</section>
+
+<p></p>
+
+<h4>Music</h4>
+
+<section class="image-section">
+  <section class="image-and-desc">
+    <audio controls>
+      <source src="" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+    <p>Main Menu music</p>
+  </section>
+</section>
+
+<section class="image-section">
+  <section class="image-and-desc">
+    <audio controls>
+      <source src="" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+    <p>In game music</p>
+  </section>
+</section>
+
+<p></p>
+
+<h3>UI</h3>
+
+<h4>Menus</h4>
+
+<p></p>
+
+<h4>In Game UI</h4>
+
+<p></p>
+
+<h3>Conclusions And Lessons Learned</h3>
+
+<p></p><!-- concepting and early design lessons -->
+
+<p></p><!-- prototyping and testing lessons -->
+
+<p></p><!-- procedural generation lessons -->
+
+<p></p><!-- control lessons -->
+
+<p></p><!-- sound lessons -->
